@@ -1,0 +1,124 @@
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/stylesheets/register.css">
+        <title>Criar conta | TecnoForce</title>
+    </head>
+
+    <body>
+        <header>
+            <div class="logo">
+                <a href="/">
+                    <h1>TECNOFORCE</h1>
+                </a>
+            </div>
+        </header>
+        <main>
+            <div id="fullCont">
+                <div id="fullForm">
+                    <form action="/login/register"  method="POST">
+                        <div class="avatar">
+                            <h2>Cadastre a sua conta</h2>
+                        </div>
+                        <div class="info">
+                            <div class="campo1">
+                                <label for="nome">Nome:</label>
+                                <input type="text" name="nome" id="nome">
+                                
+                            </div>
+                            <div class="campo2">
+                                <label for="sobrenome">Sobrenome:</label>
+                                <input type="text" name="sobrenome" id="sobrenome">
+                                
+                            </div>
+                        </div>
+                        <div id='datagen' class="info">
+                            <div class="campo1">
+                                <label for="data_de_nascimento">Data de nascimento:</label>
+                                <input id='campoData' type="date" name="data_de_nascimento" id="data_de_nascimento">
+                                
+                            </div>
+                            <div id='gen' class="campo2">
+                                <label for="genero">Genero:</label>
+                                <div class="ops">
+                                    <div class="option">
+                                        <input type="radio" name="genero" id="genero1" value="Masculino">
+                                        <label for="genero1">Masculino</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" name="genero" id="genero2" value="Feminino">
+                                        <label for="genero2">Feminino</label>
+                                    </div>
+                                    <div class="option1">
+                                        <input type="radio" name="genero" id="genero3" value="Outro">
+                                        <label for="genero3">Outro</label>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                            
+                        </div>
+                        <div class="info">
+                            <div class="campo1">
+                                <label for="cpf">CPF:</label>
+                                <input type="number" name="cpf" id="cpf" placeholder="123.456.789-10">
+                               
+                            </div>
+                            <div class="campo2">
+                                <label for="telefone">Telefone:</label>
+                                <input type="number" name="telefone" id="telefone" placeholder="( ) _ _ _ _ _ - _ _ _ _">
+                               
+                            </div>
+                        </div>
+                        <div class="info">
+                            <div class="campo1">
+                                <label for="email">Email:</label>
+                                <input type="email" name="email" id="email" placeholder="tecnoforce@email.com.br">
+                                
+                            </div>
+                            <div class="campo2">
+                                <label for="usuario">Usuario</label>
+                                <input type="text" name="usuario" id="usuario" placeholder="Usuario123">
+                                
+                            </div>
+                        </div>
+                        <div class="info">
+                            <div class="campo1">
+                                <label for="senha">Senha:</label>
+                                <input type="password" name="senha" id="senha">
+                                
+                            </div>
+                            <div class="campo2">
+                                <label for="pass2">Confirmar senha:</label>
+                                <input type="password" name="pass2" id="pass">
+                            </div>
+                        </div>
+                        <div class="infoCheck">
+                            <div class="campoCheck">
+                                <label for="authemails">
+                                    <input type="checkbox" name="authemails" id="authemails" value="true">
+                                    Aceito receber emails sobre promoções.</label>
+                            </div>
+                            <div class="campoCheck">
+                                <label for="authtermos">
+                                    <input type="checkbox" name="authtermos" id="authtermos" value="true">
+                                    Declaro que li e concordo com os termos de uso e as politicas de privacidade.
+                                </label>
+                               
+                            </div>
+                        </div>
+                        <div class="btnsub"><button type="submit">Cadastrar</button></div>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+
+    </html>

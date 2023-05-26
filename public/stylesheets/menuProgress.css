@@ -1,0 +1,61 @@
+.progress-bar{
+    width: 40vw;
+    height: 13.5px;
+    background-color: #FF4D00;
+    margin-bottom:3vh ;
+    position: relative;
+    border-radius: 20px;
+}
+
+.progress-bar-dot {
+    width: 13.5px;
+    height: 13.5px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    position: absolute;
+    border: 0.5px solid black;
+    top: 5px;
+}
+
+.progress-bar-dot-1 {
+    left: 0%;
+    top: 0;
+}
+
+.progress-bar-dot-2 {
+    left: 33%;
+    top: 0;
+}
+
+.progress-bar-dot-3 {
+    left: 65%;
+    top: 0;
+}
+.progress-bar-dot-4 {
+    left: 98%;
+    top: 0;
+}
+.texto1{
+    position: absolute;
+    left: -4%;
+    bottom: -16.5px;
+    font-weight: bold;
+}
+.texto2{
+    position: absolute;
+    left: 29%;
+    bottom: -16.5px;
+    font-weight: bold;
+}
+.texto3{
+    position: absolute;
+    left: 60%;
+    bottom: -16.5px;
+    font-weight: bold;
+}
+.texto4{
+    position: absolute;
+    left: 91%;
+    bottom: -16.5px;
+    font-weight: bold;
+}

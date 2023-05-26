@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nunito+Sans&family=Poppins:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700;900&display=swap');
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #FF4D00;
+}
+
+header{
+height: 13vh;
+background-color: #FF4D00;
+display: flex;
+align-items: center;
+padding-inline: 5%;
+border-left: 5px solid black;
+border-top: 5px solid black;
+border-right: 5px solid black;
+margin-top: 0.5vh;
+margin-right: 0.5vh;
+margin-left: 0.5vh;
+}
+.logo a{
+  text-decoration: none;
+  color: #000;
+}
+.logo{
+  font-family: 'Inter', sans-serif;
+  
+}
+main{
+height: 79vh; 
+background-color: #FF4D00;
+border-left: 5px solid black;
+border-right: 5px solid black;
+margin-right: 0.5vh;
+margin-left: 0.5vh;
+}
+
+footer{
+  height: 7vh;
+  background-color: #FF4D00 ;
+  border-left: 5px solid black;
+  border-bottom: 5px solid black;
+  border-right: 5px solid black;
+  margin-bottom: 0.5vh;
+  margin-right: 0.5vh;
+  margin-left: 0.5vh;
+}
+
+.mainContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contFull{
+  background-color: #FFFFFF;
+  padding: 5%;
+  border-radius: 20px;
+  flex-grow: 1;
+  width: 40vw;
+  height: 80vh;
+  font-family: 'nunito-sans', sans-serif;
+}
+.text1{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10%;
+  
+}
+.logEmail{
+  padding-bottom: 5%;
+  font-weight: bolder;
+}
+.logEmail input{
+  width: 100%;
+  font-size: 20px;
+  padding: 7px;
+  border-radius: 7px;
+  border-width: 0.5px;
+  border-style: solid;
+  border-color: #FF4D00;
+}
+.logSenha{
+  padding-bottom: 5%;
+  font-weight: bolder;
+}
+.logSenha input{
+  width: 100%;
+  font-size: 20px;
+  padding: 7px;
+  border-radius: 7px;
+  border-width: 0.5px;
+  border-style: solid;
+  border-color: #FF4D00;
+}
+.logCheckComp{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10%;
+}
+.logCheckComp a{
+  font-weight: bold;
+  color: #000;
+}
+.logCheck{
+ display: flex;
+}
+.btnsub{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10%;
+}
+.btnsub button{
+  width: 10vw;
+  font-size:x-large;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  border-radius: 10px;
+  border-color: #FF4D00;
+  background-color: #FF4D00;
+}
+.text2 a{
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  color: #000;
+}
+.text3 a{
+  display: flex;
+  justify-content: center;
+  padding-top: 1.5vh;
+  font-weight: bold;
+  color: #000;
+}
+ /*Alinhamento do form e demais elementos*/ 
+ 
+ /*Estilização*/

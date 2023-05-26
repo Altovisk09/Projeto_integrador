@@ -1,0 +1,218 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    height: 20vh;
+    margin-bottom: 5vh;
+}
+main{
+    height: 80vh
+}
+footer{
+    height: 5vh
+}
+
+.estilização{
+    height: 2vh;
+    margin-bottom: 0.3vh;
+    background-color: #FF4D00;
+}
+.estilização2{
+    height: 3.5vh;
+    background-color: #ffffff;
+    border-top: 1px solid #FF4D00;
+    filter: blur(1.5px);
+}
+.estilização3{
+    height: 1.5vh;
+    background-color: #FF4D00;  
+}
+.menu{
+    height: 18vh;
+    border: 1.5px solid #FF4D00;
+    box-shadow: 0px 6px 6px rgba(255, 77, 0, 0.31);
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    padding-bottom: 4vh;
+    padding-inline: 3.5vw;
+}
+.progress-bar{
+    width: 519px;
+    height: 7px;
+    background-color: #FF4D00;
+}
+.carrinho{
+    padding-inline: 3.5vw;
+}
+.carrinho h2{
+    border-bottom: 1px solid black;
+    margin-bottom: 2vh;
+}
+.estilizaçaoCampo{
+    display: flex;
+}
+.produtos{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 4vh;
+    width: 46.5vw;
+}
+#product{
+    display: flex;
+    align-items: center;
+    border: 1px solid #D9D9D9;
+    height: 10vh;
+    margin-top: 1.5px;
+    margin-right: 1px;
+    padding-left: 1vw;
+}
+.item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #D9D9D9;
+    height: 10vh;
+    margin-top: 1.5px;
+    margin-right: 1px;
+}
+.item button{
+    border-radius: 50px;
+    border-color: #FF4D00;
+    background-color: #FF4D00;
+    color: #ffffff;
+    width: 20px;
+    height: 20px;
+}
+.qtd{
+    display: flex;
+    justify-content: center;
+    border: 0.5px solid #FF4D00;
+    width: 3vw;
+    margin-inline: 1vw;
+}
+.item-descriçao{
+    display: flex;
+    flex-direction: column;
+}
+.frete{
+    width: 11vw;
+    
+}
+
+.quantidade{
+    width: 11.6vw;
+    
+}
+.preço{
+    width: 11.6vw;
+    
+}
+.total{
+    width: 11.6vw;
+   
+}
+
+.h1{
+    background-color: #FF4D00;
+    color: #ffffff;
+    padding: 3px;
+    padding-left: 5px;
+    margin-right: 1px;
+}
+.h3{
+    background-color: #FF4D00;
+    color: #ffffff;
+    padding: 3px;
+    display: flex;
+    justify-content: center;
+    margin-right: 1px;
+}
+
+
+.cupom{
+    display: flex;
+    align-items: center;
+    padding-top:2vh;
+    padding-bottom: 1.5vh;
+    padding-inline: 1vh;
+    margin-top: 2vh ;
+    margin-bottom: 2vh ;
+    border: 1px solid #FF4D00
+}
+.cupom input{
+    border: 1px solid #000000;
+    padding-left: 15px;
+    font-size: 23px;
+    width: 15vw;
+}
+.cupom button{
+    border-style: none;
+    padding-inline: 1.5vw;
+    font-size: 23px;
+    border: 1px solid #FF4D00;
+    background-color: #FF4D00;
+    color: #ffffff;
+    margin-left: -4px;
+}
+.calcValor{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.subt{
+    display: flex;
+}
+.entrega{
+    display: flex;
+}
+.total1{
+    display: flex; 
+}
+.camp1{
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+    border: 1px solid #D9D9D9;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    width: 10vw;
+    height: 8vh;
+}
+.calc1{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 5%;
+    border: 1px solid #D9D9D9;
+    margin-bottom: 1px;
+    width: 20vw;
+    height: 8vh;
+}
+.btns{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2vh;
+}
+.btns button{
+    width: 20vw;
+    height: 8vh;
+}
+.btn1{
+    border-radius: 20px;
+    border-color: #FF4D00;
+    background-color: #ffffff;
+    color: #000000;
+    font-weight:900;
+}
+.btn2{
+    border-radius: 20px;
+    border-color: #FF4D00;
+    background-color: #FF4D00;
+    color: #ffffff;
+    font-weight:bolder;
+}
+

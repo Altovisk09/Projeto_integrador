@@ -1,0 +1,170 @@
+@import url('https://fonts.googlapis.com/css2?family=Black+Han+Sans&family=Nunito+Sans&family=Poppins:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700;900&display=swap');
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'nunito-sans', sans-serif;
+}
+body{
+  background-color: #FF4D00;
+}
+.logo{
+    margin-top: 3vh;
+}
+.logo a{
+    font-family: 'Inter', 'sans-serif';
+    text-decoration: none;
+    color: #000;
+}
+header{
+height: 5vh;
+background-color: #FF4D00;
+padding-inline: 5%;
+border-left: 5px solid black;
+border-top: 5px solid black;
+border-right: 5px solid black;
+margin-top: 0.5vh;
+margin-right: 0.5vh;
+margin-left: 0.5vh;
+}
+
+main{
+height: max-content; 
+background-color: #FF4D00;
+border-left: 5px solid black;
+border-right: 5px solid black;
+margin-right: 0.5vh;
+margin-left: 0.5vh;
+}
+
+footer{
+  height: 5vh;
+  background-color: #FF4D00 ;
+  border-left: 5px solid black;
+  border-bottom: 5px solid black;
+  border-right: 5px solid black;
+  margin-bottom: 0.5vh;
+  margin-right: 0.5vh;
+  margin-left: 0.5vh;
+}
+#fullCont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#fullForm{
+    background-color: #ffffff;
+    border-radius: 20px ;
+    padding: 3vw ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3vh;
+}
+.avatar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1%;
+}
+.info{
+    display: flex;
+}
+.campo1{
+    display: flex;
+    flex-direction: column;
+    padding-top:1%;
+    padding-bottom:1%;
+    padding-right: 2vw;
+}
+.campo2{
+    display: flex;
+    flex-direction: column;
+    padding-top:1vh;
+    padding-bottom:1vh;
+}
+#datagen{
+    display: flex;
+    justify-content: space-around;
+}
+.option{
+    padding-right: 0.5vw;
+    
+}
+.infoCheck{
+    display: flex; 
+    flex-direction: column;
+    padding-top:1vh;
+    padding-bottom:1vh;
+    font-size: 12px;
+}
+.campoCheck label{
+    display: flex;
+}
+.btnsub{
+    display: flex;
+    justify-content: center;
+}
+/*Estilização*/
+.info input{
+    font-size: 20px;
+    padding: 7px;
+    border-radius: 7px;
+    border-width: 0.5px;
+    border-style: solid;
+    border-color: #FF4D00;  
+}
+#campoData{
+    text-align: center;
+    font-size: 18px;
+    padding: 7px;
+    border-radius: 7px;
+    border-width: 0.5px;
+    border-style: solid;
+    border-color: #FF4D00;
+}
+label{
+    font-weight: bold;
+}
+.btnsub button{
+    border-radius: 7px;
+    border-width: 0.5px;
+    border-style: solid;
+    border-color: #FF4D00;
+    font-size: 20px;
+    padding: 5px;
+    width: 10vw; 
+}
+.ops{
+    display: flex;
+}
+#gen label{
+    margin-bottom: 1vh;
+}
+#gen input[type="radio"] {
+    display: none;
+}
+#gen label {
+    cursor: pointer;
+    transition: color 0.5s;
+}
+.option{
+    border: 1px solid #FF4D00;
+    margin-right:0.5vw ;
+    border-radius: 10px;
+    padding: 2px; 
+}
+.option1{
+    border: 1px solid #FF4D00;
+    border-radius: 10px;
+    padding: 2px;
+}
+#gen input[type="radio"]:checked + label {
+    color: #FF4D00; 
+}
+
+
+
+
+

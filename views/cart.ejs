@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/cart.css">
+    <link rel="stylesheet" href="/stylesheets/menuProgress.css">
+    <title>Carrinho | TecnoForce</title>
+</head>
+<body>
+    <%-include('./partials/menuProgress')%>
+    <main>
+        <div class="carrinho">
+            <h2>Meu Carrinho:</h2>
+            <div class="estilizaçaoCampo">
+            <div class="produtos">
+                <div class="h1">
+                <h3>Produtos</h3>
+            </div>
+                <div  id="product">
+                    <img src="" alt="ps4">
+                    <div class="item-descriçao">
+                        <b><p>Titulo</p></b>
+                        <p>Descrição</p>
+                    </div>
+                </div>
+            </div>
+            <div class="frete">
+                <div class="h3">
+                <h3>Frete</h3>
+            </div>
+            <div class="item">
+                <div class="fretecss">
+                    <a href="#">calcular</a>
+                </div>
+                </div>
+            </div>
+            <div class="quantidade">
+                <div class="h3">
+                <h3>Quantidade</h3>
+            </div>
+                <div class="item">
+                    <button>-</button>
+                    <div class="qtd">1</div>
+                    <button>+</button>
+                </div>
+            </div>
+            <div class="preço">
+                <div class="h3">
+                <h3>Preço</h3>
+            </div>
+                <div class="item">
+                    <b><p>R$</p></b><p>3.999,90</p>
+                </div>
+            </div>
+            <div class="total">
+                <div class="h3">
+                <h3>Total</h3>
+            </div>
+                <div class="item">
+                </div>
+            </div>
+        </div>
+        <div class="cupom">
+            <div class="h3">
+            <h3>Cupom de desconto</h3>
+        </div>
+            <form action="#">
+                <label for="cupom">
+                    <input type="text" name="cupom" id="cupom" placeholder="XCJ2345">
+                    <button type="submit">APLICAR</button>
+                </label>
+            </form>
+        </div>
+        <div class="calcValor">
+            <div class="subt">
+                <div class="camp1">
+                <p>SUBTOTAL</p>
+            </div>
+                <div class="calc1">FormJS</div>
+            </div>
+            <div class="entrega">
+                <div class="camp1">
+                <p>ENTREGA</p>
+            </div>
+                <div class="calc1"><a href="">calcular</a></div>
+            </div>
+            <div class="total1">
+                <div class="camp1">
+                <p>TOTAL</p>
+            </div>
+                <div class="calc1">FormJS</div>
+            </div>
+        </div>
+        <div class="btns">
+            <button class="btn1">ESCOLHER MAIS PRODUTOS</button>
+            <button class="btn2">FINALIZAR SUA COMPRA</button>
+        </div>
+    </main>
+    <footer>
+        <div class="estilização2"></div>
+        <div class="estilização3"></div>
+    </footer>
+</body>
+</html>
