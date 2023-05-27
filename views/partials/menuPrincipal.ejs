@@ -28,9 +28,13 @@
         </div>
         <div class="log-cad">
             <!-- Inserir icone de usuario -->
+            <%if(!locals.isLogged) {%>
             <div class="login">
                 <a href="/login"><b><p>Entre ou <br> Crie a sua conta =></p></b></a>
             </div>
+            <%} else {%>
+            <div class="login"><a href="/profile/logout"><b>Sair</b></a></div>
+            <%}%>
         </div>
         <div class="cart">
         <div>

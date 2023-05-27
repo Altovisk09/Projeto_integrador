@@ -3,11 +3,13 @@
   var path = require('path');
   var cookieParser = require('cookie-parser');
   var logger = require('morgan');
-
+  var session = require('express-session')
   // routes
   const loginRouter = require('./routes/login');
   const cartRouter = require('./routes/cart');
   const homeRouter = require('./routes/home');
+  const userRouter = require('./routes/user');
+  const estaLogado = require('./middlewares/islogged');
 
   var app = express();
 
@@ -15,6 +17,12 @@
   app.set('views', path.join(__dirname, 'views'));
   app.set('view engine', 'ejs');
 
+  app.use(session({
+    secret: "senha",
+    resave: false,
+    saveUninitialized: false,
+  }))
+  app.use(estaLogado);
   app.use(logger('dev'));
   app.use(express.json());
   app.use(express.urlencoded({ extended: false }));
@@ -24,6 +32,7 @@
   //rotas
   app.use('/login', loginRouter);
   app.use('/cart', cartRouter);
+  app.use('/profile', userRouter);
   app.use('/', homeRouter);
 
   // catch 404 and forward to error handler

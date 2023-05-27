@@ -27,20 +27,27 @@
                         <div class="info">
                             <div class="campo1">
                                 <label for="nome">Nome:</label>
-                                <input type="text" name="nome" id="nome">
-                                
+                                <input type="text" name="nome" id="nome" value="<%= locals.oldData ? oldData.nome : null %>">
+
+                                <% if (errors && errors.nome && errors.nome.msg) { %>
+                                    <div class="error-message"><%= errors.nome.msg %></div>
+                                  <% } %>
                             </div>
                             <div class="campo2">
                                 <label for="sobrenome">Sobrenome:</label>
-                                <input type="text" name="sobrenome" id="sobrenome">
-                                
+                                <input type="text" name="sobrenome" id="sobrenome" value="<%= locals.oldData ? oldData.sobrenome : null %>">
+                                <% if (errors && errors.sobrenome && errors.sobrenome.msg) { %>
+                                    <div class="error-message"><%= errors.sobrenome.msg %></div>
+                                  <% } %>
                             </div>
                         </div>
                         <div id='datagen' class="info">
                             <div class="campo1">
                                 <label for="data_de_nascimento">Data de nascimento:</label>
-                                <input id='campoData' type="date" name="data_de_nascimento" id="data_de_nascimento">
-                                
+                                <input id='campoData' type="date" name="data_de_nascimento" id="data_de_nascimento" value="<%= locals.oldData ? oldData.data_de_nascimento : null %>">
+                                <% if (errors && errors.data_de_nascimento && errors.data_de_nascimento.msg) { %>
+                                    <div class="error-message"><%= errors.data_de_nascimento.msg %></div>
+                                  <% } %>
                             </div>
                             <div id='gen' class="campo2">
                                 <label for="genero">Genero:</label>
@@ -58,7 +65,9 @@
                                         <label for="genero3">Outro</label>
                                     </div>
                                 </div>
-                               
+                                <% if (errors && errors.genero && errors.genero.msg) { %>
+                                    <div class="error-message"><%= errors.genero.msg %></div>
+                                  <% } %>
                             </div>
                             
                         </div>
@@ -66,36 +75,50 @@
                             <div class="campo1">
                                 <label for="cpf">CPF:</label>
                                 <input type="number" name="cpf" id="cpf" placeholder="123.456.789-10">
-                               
+                                <% if (errors && errors.cpf && errors.cpf.msg) { %>
+                                    <div class="error-message"><%= errors.cpf.msg %></div>
+                                  <% } %>
                             </div>
                             <div class="campo2">
                                 <label for="telefone">Telefone:</label>
-                                <input type="number" name="telefone" id="telefone" placeholder="( ) _ _ _ _ _ - _ _ _ _">
-                               
+                                <input type="number" name="telefone" id="telefone" placeholder="( ) _ _ _ _ _ - _ _ _ _" value="<%= locals.oldData ? oldData.telefone : null %>">
+                                <% if (errors && errors.telefone && errors.telefone.msg) { %>
+                                    <div class="error-message"><%= errors.telefone.msg %></div>
+                                  <% } %>
                             </div>
                         </div>
                         <div class="info">
                             <div class="campo1">
                                 <label for="email">Email:</label>
-                                <input type="email" name="email" id="email" placeholder="tecnoforce@email.com.br">
-                                
+                                <input type="text" name="email" id="email" placeholder="tecnoforce@email.com.br" value="<%= locals.oldData ? oldData.email : null %>">
+                                <% if (errors && errors.email && errors.email.msg) { %>
+                                    <div class="error-message"><%= errors.email.msg %></div>
+                                  <% } %>
                             </div>
                             <div class="campo2">
                                 <label for="usuario">Usuario</label>
-                                <input type="text" name="usuario" id="usuario" placeholder="Usuario123">
-                                
+                                <input type="text" name="usuario" id="usuario" placeholder="Usuario123" value="<%= locals.oldData ? oldData.usuario : null %>">
+                                <% if (errors && errors.usuario && errors.usuario.msg) { %>
+                                    <div class="error-message"><%= errors.usuario.msg %></div>
+                                  <% } %>
                             </div>
                         </div>
                         <div class="info">
                             <div class="campo1">
                                 <label for="senha">Senha:</label>
                                 <input type="password" name="senha" id="senha">
-                                
+                                <% if (errors && errors.senha && errors.senha.msg) { %>
+                                    <div class="error-message"><%= errors.senha.msg %></div>
+                                  <% } %>
                             </div>
                             <div class="campo2">
                                 <label for="pass2">Confirmar senha:</label>
                                 <input type="password" name="pass2" id="pass">
+                                <% if (errors && errors.pass2 && errors.pass2.msg) { %>
+                                    <div class="error-message"><%= errors.pass2.msg %></div>
+                                  <% } %>
                             </div>
+                            
                         </div>
                         <div class="infoCheck">
                             <div class="campoCheck">
@@ -108,7 +131,7 @@
                                     <input type="checkbox" name="authtermos" id="authtermos" value="true">
                                     Declaro que li e concordo com os termos de uso e as politicas de privacidade.
                                 </label>
-                               
+                                <script></script>
                             </div>
                         </div>
                         <div class="btnsub"><button type="submit">Cadastrar</button></div>
@@ -119,6 +142,8 @@
         <footer>
 
         </footer>
+        <script src="/javascripts/validationCheck.js"></script>
+
     </body>
 
     </html>

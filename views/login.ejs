@@ -20,27 +20,34 @@
             <div class="text1">
                 <h1>Já tenho cadastro:</h1>
             </div>
-                <form action="#">
+                <form action="/login" method="POST">
                     <div class="logEmail">
-                    <p>Email ou Usuario:</p>
-                    <input type="email">
-                    </div>
+                    <label for="user">Email ou Usuario:</label>
+                    <input type="text" name="user" id="user" value="<%= locals.oldData ? oldData.user : null %>">
+                    <% if (errors && errors.user && errors.user.msg) { %>
+                        <div class="error-message"><%= errors.user.msg %></div>
+                      <% } %>
+                </div>
                     <div class="logSenha">
-                    <p>Senha:</p>
-                    <input type="password">
-                    </div>
+                    <label for="senha">Senha:</label>
+                    <input type="password" name="pass" id="pass">
+                    <% if (errors && errors.pass && errors.pass.msg) { %>
+                        <div class="error-message"><%= errors.pass.msg %></div>
+                      <% } %>
+                </div>
+                    
                     <div class="logCheckComp">
                         <div class="logCheck" >
                         <input type="checkbox" id="checkbox">
                         <p>Mantenha-me conectado</p>
                         </div>
-                        <a href="#">Esqueci minha senha</a>    
+                        <a href="/login/perdeuPreiboi">Esqueci minha senha</a>    
                     </div>
                     <div class="btnsub"><button type="submit">ENTRAR</button></div>
                     <div class="text2"><a href="/login/register">Ainda não tem cadastro conosco? Junte-se a nós</a></div>
                     <div class="text3"><a href="#">Suporte TecnoForce</a></div>
-                </div>
                 </form>
+                </div>
         </div>
     </main>
     <footer>

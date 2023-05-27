@@ -163,7 +163,11 @@ label{
 #gen input[type="radio"]:checked + label {
     color: #FF4D00; 
 }
-
+.error-message{
+    color: red;
+    font-weight: bold;
+    font-size: small;
+}
 
 
 

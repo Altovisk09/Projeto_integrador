@@ -32,7 +32,7 @@ margin-left: 0.5vh;
   
 }
 main{
-height: 79vh; 
+height: 85vh; 
 background-color: #FF4D00;
 border-left: 5px solid black;
 border-right: 5px solid black;
@@ -62,7 +62,7 @@ footer{
   border-radius: 20px;
   flex-grow: 1;
   width: 40vw;
-  height: 80vh;
+  height: 85vh;
   font-family: 'nunito-sans', sans-serif;
 }
 .text1{
