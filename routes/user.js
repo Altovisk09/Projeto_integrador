@@ -5,6 +5,7 @@ const userController = require('../controllers/userController')
 const notLogged = require('../middlewares/notLogged')
 
 router.get('/',notLogged, userController.userIndex);
+
 router.get('/logout',notLogged, userController.logout);
 
 

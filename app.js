@@ -4,12 +4,19 @@
   var cookieParser = require('cookie-parser');
   var logger = require('morgan');
   var session = require('express-session')
+
+
   // routes
   const loginRouter = require('./routes/login');
   const cartRouter = require('./routes/cart');
   const homeRouter = require('./routes/home');
   const userRouter = require('./routes/user');
-  const estaLogado = require('./middlewares/islogged');
+  const testeRouter = require('./routes/teste');
+
+
+  //middlewares
+  const estaLogado = require('./middlewares/SessionLog');
+  
 
   var app = express();
 
@@ -22,18 +29,25 @@
     resave: false,
     saveUninitialized: false,
   }))
-  app.use(estaLogado);
+  
   app.use(logger('dev'));
   app.use(express.json());
   app.use(express.urlencoded({ extended: false }));
   app.use(cookieParser());
   app.use(express.static(path.join(__dirname, 'public')));
+  
+  //middlewares
+  app.use(estaLogado);
+
+
 
   //rotas
   app.use('/login', loginRouter);
   app.use('/cart', cartRouter);
   app.use('/profile', userRouter);
   app.use('/', homeRouter);
+  app.use('/teste', testeRouter)
+
 
   // catch 404 and forward to error handler
   app.use(function(req, res, next) {

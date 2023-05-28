@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TecnoForce | Categorias </title> 
+    <link rel="stylesheet" href="/stylesheets/menu.css">
+    <link rel="stylesheet" href="/stylesheets/categoria.css">
+    <link rel="stylesheet" href="/stylesheets/footer.css">
+</head>
+<body>
+    <%- include('partials/menuPrincipal') %>
+    <main>
+      </section>
+      <br>
+      <h2>Produtos relacionados a categoria "categoria"</h2>
+          <section class="produtos">
+            <div class="grid-container">
+              <% for (let i = 0; i < produtos.length; i++) { %>
+                <div class="fullProduct">
+                  <div class="image">
+                    <img class="productImage" src="<%= produtos[i].imagem %>" alt="<%= produtos[i].nome_produto %>">
+                  </div>
+                  <div class="description">
+                   <b><%= produtos[i].nome_produto %></b>
+                    <p><%= produtos[i].descricao %></p>
+                    <h5 id="promoFake">
+                     De R$ <%= (produtos[i].preco * 1.2).toFixed(2) %> por:</h5>
+                    <br>
+                    <div id="infoPreco">
+                      <div class="preco">
+                    <h6>a vista:</h6>
+                    <p id="preco">R$ <%= produtos[i].preco %></p>
+                    <h6>no PIX com 20% de desconto</h6>
+                  </div>
+                    <div class="btnDetails">
+                    <a href="#"><button id="btn"><p>Detalhes</p></button></a>
+                  </div>
+                  </div>
+                  </div>
+                </div>
+              <% } %>
+            </div>
+          </section> 
+
+  </main>
+  <section class="banner-carrossel1">
+    <div class="carousel-container">
+        <div class="banner"><img src="/images/meme1.jpg" alt="memees"></div>
+        <div class="banner"><img src="/images/meme2.jpg" alt="memees"></div>
+        <div class="banner"><img src="/images/meme3.jpg" alt="memees"></div>
+    </div>
+</section>
+<script src="/javascripts/bannerCarrosel.js"></script>
+  <%-include('./partials/footer')%>
+</body>
+
+</html>

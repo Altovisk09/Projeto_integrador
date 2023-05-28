@@ -2,7 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    color: #000;
 }
+h
 header{
     height: 20vh; 
 }
@@ -117,7 +120,6 @@ header{
     text-decoration: none;
 }
 /* Menu3 */
-
 
 
 

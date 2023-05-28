@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheets/home.css">
     <link rel="stylesheet" href="/stylesheets/menu.css">
+    <link rel="stylesheet" href="/stylesheets/footer.css">
     <title>TecnoForce | Home</title>
 </head>
 
@@ -14,136 +15,57 @@
     <%- include('partials/menuPrincipal') %>
         <main>
             <section class="banner-carrossel1">
-                <div>
-                    <h1>Banner Carrosel</h1>
+                <div class="carousel-container">
+                    <div class="banner"><img src="/images/meme1.jpg" alt="memees"></div>
+                    <div class="banner"><img src="/images/meme2.jpg" alt="memees"></div>
+                    <div class="banner"><img src="/images/meme3.jpg" alt="memees"></div>
                 </div>
             </section>
-            <section class="produtos">
-                <!-- PRODUTO -->
-                <div class="produtoComp">
+            </section>
+            <br>
+            <h2>Todos os nosso produtos:</h2>
+                <section class="produtos">
                     
-                        <div class="imagem">imagem</div>
-                        <div class="descrição">
-                        <p>Descrição do produto.</p>
+                  <div class="grid-container">
+                    <% for (let i = 0; i < produtos.length; i++) { %>
+                      <div class="produtoComp">
+                        <div class="imagem">
+                          <img class="imagemProduto" src="<%= produtos[i].imagem %>" alt="<%= produtos[i].nome_produto %>">
                         </div>
-                <!-- PRODUTO -->
-                    </div>
-                    <div class="produtoComp">
-                        <div class="imagem">imagem</div>
                         <div class="descrição">
-                            <p>Descrição do produto.</p>
+                         <b><%= produtos[i].nome_produto %></b>
+                          <p><%= produtos[i].descricao %></p>
+                          <h5 id="precoAumentado">
+                           De R$ <%= (produtos[i].preco * 1.2).toFixed(2) %> por:</h5>
+                          <br>
+                          <div id="infoPrec">
+                            <div class="prec">
+                          <h6>a vista:</h6>
+                          <p id="preco">R$ <%= produtos[i].preco %></p>
+                          <h6>no PIX com 20% de desconto</h6>
                         </div>
-                    </div>
-                    <div class="produtoComp">
-                        <div class="imagem">imagem</div>
-                        <div class="descrição">
-                            <p>Descrição do produto.</p>
+                          <div class="btnDetails">
+                          <a href="#"><button id="btn"><p>Detalhes</p></button></a>
                         </div>
-                    </div>
-                    <div class="produtoComp">
-                        <div class="imagem">imagem</div>
-                        <div class="descrição">
-                            <p>Descrição do produto.</p>
                         </div>
-                    </div>
-                    <div class="produtoComp">
-                        <div class="imagem">imagem</div>
-                        <div class="descrição">
-                            <p>Descrição do produto.</p>
                         </div>
-                    </div>
-                    <div class="produtoComp">
-                        <div class="imagem">imagem</div>
-                        <div class="descrição">
-                            <p>Descrição do produto.</p>
-                        </div>
-                    </div>    
-            </section>
-            <section class="banner-carrossel1">
+                      </div>
+                    <% } %>
+                  </div>
+                </section>
+                <section class="banner-carrossel2">
                 <div>
-                    <h1>Banner Carrosel</h1>
+                    <h1>Banner Carrossel 2</h1>
                 </div>
-            </section>
-            <section class="produtos">
-                <!-- PRODUTO -->
-                <div class="produtoComp">
-                        <div class="imagem">imagem</div>
-                        <div class="descrição">
-                        <p>Descrição do produto.</p>
-                        </div>
-                <!-- PRODUTO -->
-                    </div>
-                    <div class="produtoComp">
-                        <div class="imagem">imagem</div>
-                        <div class="descrição">
-                            <p>Descrição do produto.</p>
-                        </div>
-                    </div>
-                    <div class="produtoComp">
-                        <div class="imagem">imagem</div>
-                        <div class="descrição">
-                            <p>Descrição do produto.</p>
-                        </div>
-                    </div>
-                    <div class="produtoComp">
-                        <div class="imagem">imagem</div>
-                        <div class="descrição">
-                            <p>Descrição do produto.</p>
-                        </div>
-                    </div>
-                    <div class="produtoComp">
-                        <div class="imagem">imagem</div>
-                        <div class="descrição">
-                            <p>Descrição do produto.</p>
-                        </div>
-                    </div>
-                    <div class="produtoComp">
-                        <div class="imagem">imagem</div>
-                        <div class="descrição">
-                            <p>Descrição do produto.</p>
-                        </div>
-                    </div>    
-            </section>
+                <div class="carousel-container">
+                    <div class="banner">Imagem 4</div>
+                    <div class="banner">Imagem 5</div>
+                    <div class="banner">Imagem 6</div>
+                </div>
+            </section>  
         </main>
-        <footer>
-            <div class="institucional">
-                <h4 class="texto1">INSTITUCIONAL</h4>
-                <div>
-                    <p class="texto"><a href="">Quem somos</a></p>
-                    <p class="texto"><a href="">Como comprar</a></p>
-                    <p class="texto"><a href="">Segurança e privacidade</a></p>
-                    <p class="texto"><a href="">Envio</a></p>
-                    <p class="texto"><a href="">Pagamento</a></p>
-                    <p class="texto"><a href="">Garantia</a></p>
-                    <p class="texto"><a href="">Depoimentos de Clientes</a></p>
-                    <p class="texto"><a href="">Noticias</a></p>
-                    <p class="texto"><a href="">Troca e devoluções</a></p>
-                    <p class="texto"><a href="">Retirada na loja</a></p>
-                    <p class="texto"><a href="">Fale conosco</a></p>
-                </div>
-            </div>
-            <div class="atendimento">
-                <div class="icon">
-                <img src="" alt="tel">
-                <h4 class="texto1">ATENDIMENTO</h4>
-                </div>
-                <p class="texto">(11)3003-3333</p>
-                <div class="texto" class="icon">
-                <img src="" alt="relo">
-                <h4>Horarios de Funcionamento</h4>
-                </div>
-                <p class="texto">Atendimento de Segunda a Sexta das <br> 08:00 as 21:00.</p>
-            </div>
-            <div class="pagamento">
-                <h4 class="texto1">FORMA DE PAGAMENTO</h4>
-                <div class="texto"><a href="">Pagamento à vista:</a></div>
-                <div class="texto"><a href="">Pagamento à Prazo:</a></div>
-                <div class="texto"><a href="">Boleto</a></div>
-                <div class="texto"><a href="">Transferência (Santander)</a></div>
-                <div class="texto"><a href="">PIX</a></div>
-                <div class="texto"><a href="">Link de Pagamento</a></div>
-            </div>
-        </footer>
+        <%-include('./partials/footer')%>
+        <script src="/javascripts/bannerCarrosel.js"></script>
 </body>
 
 </html>

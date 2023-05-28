@@ -13,44 +13,58 @@
     </div>
     <div class="menu">
         <div class="logo">
-            <img src="" alt="=">
-            <div> 
+            <a href="/"><img src="" alt="="></a>
+            <a href="/">
+                <div> 
                 <h2>TecnoForce</h2>
                 <p>A tecnologia em suas mãos</p>
             </div>
+        </a>
         </div>
         <div class="bar-pesquisa">
-            <form action="" method="post">
+            <form action="/search" method="get" onsubmit="searchProducts(event)">
                 <label for="pesquisa"></label>
-                <input type="text" placeholder="Encontre seu produto" name="pesquisa" id="pesquisa">
+                <input type="text" placeholder="Encontre seu produto" name="pesquisa" id="pesquisa-input">
                 <!-- Inserir botão futuramente -->
             </form>
         </div>
         <div class="log-cad">
             <!-- Inserir icone de usuario -->
-            <%if(!locals.isLogged) {%>
-            <div class="login">
-                <a href="/login"><b><p>Entre ou <br> Crie a sua conta =></p></b></a>
-            </div>
-            <%} else {%>
-            <div class="login"><a href="/profile/logout"><b>Sair</b></a></div>
-            <%}%>
+            <% if (!locals.isLogged) { %>
+                <div class="login">
+                    <a href="/login"><b><p>Entre ou <br> Crie a sua conta =></p></b></a>
+                </div>
+            <% } else { %>
+                <div class="login">
+                    <a href="/profile/logout"><b>Sair</b></a>
+                </div>
+            <% } %>
         </div>
         <div class="cart">
-        <div>
-            <a href="/cart"><img src="" alt="Cart"></a>
+            <div>
+                <a href="/cart"><img src="" alt="Cart"></a>
+            </div>
         </div>
-    </div>
     </div>
     <div class="sub-menu-estilizaçao">
         <div class="submenu">
-            <button id="cate"><a href="">Categorias</a></button>
-            <button id="subbt"><a href="">PC Gamer</a></button>
-            <button id="subbt"><a href="">Notebooks</a></button>
-            <button id="subbt"><a href="">Consoles</a></button>
-            <button id="subbt"><a href="">Monitores</a></button>
-            <button id="subbt"><a href="">Perifericos</a></button>
-    </div>
+            <button id="cate"><a href="#">Categorias</a></button>
+            <button id="subbt"><a href="/category/1">PC Gamer</a></button>
+            <button id="subbt"><a href="/category/2">Notebooks</a></button>
+            <button id="subbt"><a href="/category/3">Consoles</a></button>
+            <button id="subbt"><a href="/category/4">Monitores</a></button>
+            <button id="subbt"><a href="/category/5">Periféricos</a></button>
+        </div>
     </div>
 </header>
+    <script>
+        function searchProducts(event) {
+            event.preventDefault(); // Evita o envio do formulário padrão
+    
+            const searchTerm = document.getElementById('pesquisa-input').value;
+    
+            // Redireciona para a página de resultados da pesquisa
+            window.location.href = '/search?searchTerm=' + encodeURIComponent(searchTerm);
+        }
+    </script>
 
