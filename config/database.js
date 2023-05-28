@@ -1,6 +1,6 @@
 const config = {
     username:'Altovisk',
-    password:'eric27121965',
+    password:'',
     database:'projeto_integrador',
     host:'localhost',
     dialect:'mysql'
