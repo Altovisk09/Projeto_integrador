@@ -12,60 +12,68 @@
 </head>
 
 <body>
-    <%- include('partials/menuPrincipal') %>
-        <main>
-            <section class="banner-carrossel1">
-                <div class="carousel-container">
-                    <div class="banner"><img src="/images/meme1.jpg" alt="memees"></div>
-                    <div class="banner"><img src="/images/meme2.jpg" alt="memees"></div>
-                    <div class="banner"><img src="/images/meme3.jpg" alt="memees"></div>
-                </div>
-            </section>
-            </section>
-            <br>
-            <h2>Todos os nosso produtos:</h2>
-                <section class="produtos">
-                    
-                  <div class="grid-container">
-                    <% for (let i = 0; i < produtos.length; i++) { %>
-                      <div class="produtoComp">
+    <%-include('partials/menuPrincipal') %>
+    <main>
+        <section class="banner-carrossel1">
+            <div class="carousel-container">
+                <div class="banner"><img src="/images/08355994-f03a-4da3-92e4-3149d19b440a.jpeg" alt="banner"></div>
+                <div class="banner"><img src="/images/acerprojetoresmonitores-capa.jpg" alt="banner"></div>
+                <div class="banner"><img src="/images/BANNERS2.webp" alt="banner"></div>
+            </div>
+        </section>
+        <br>
+        <h2>Produtos nessa página: <%= produtos.length %></h2>
+        <section class="produtos">
+
+            <div class="grid-container">
+                <% for (let i = 0; i < produtos.length; i++) { %>
+                    <div class="produtoComp">
                         <div class="imagem">
-                          <img class="imagemProduto" src="<%= produtos[i].imagem %>" alt="<%= produtos[i].nome_produto %>">
+                            <img class="imagemProduto" src="<%= produtos[i].imagem %>" alt="<%= produtos[i].nome_produto %>">
                         </div>
                         <div class="descrição">
-                         <b><%= produtos[i].nome_produto %></b>
-                          <p><%= produtos[i].descricao %></p>
-                          <h5 id="precoAumentado">
-                           De R$ <%= (produtos[i].preco * 1.2).toFixed(2) %> por:</h5>
-                          <br>
-                          <div id="infoPrec">
-                            <div class="prec">
-                          <h6>a vista:</h6>
-                          <p id="preco">R$ <%= produtos[i].preco %></p>
-                          <h6>no PIX com 20% de desconto</h6>
+                            <b><%= produtos[i].nome_produto %></b>
+                            <p><%= produtos[i].descricao %></p>
+                            <h5 id="precoAumentado">
+                                De R$ <%= (produtos[i].preco * 1.2).toFixed(2) %> por:</h5>
+                            <br>
+                            <div id="infoPrec">
+                                <div class="prec">
+                                    <h6>a vista:</h6>
+                                    <p id="preco">R$ <%= produtos[i].preco %></p>
+                                    <h6>no PIX com 20% de desconto</h6>
+                                </div>
+                                <div class="btnDetails">
+                                    <a href="/products/<%= produtos[i].produto_id %>"><button id="btn">Detalhes</button></a>
+                                </div>
+                            </div>
                         </div>
-                          <div class="btnDetails">
-                          <a href="#"><button id="btn"><p>Detalhes</p></button></a>
-                        </div>
-                        </div>
-                        </div>
-                      </div>
+                    </div>
+                <% } %>
+            </div>
+        </section>
+        <div class="pagination">
+            <% if (totalPages > 1) { %>
+                <% if (currentPage > 1) { %>
+                    <a href="/?page=<%= currentPage - 1 %>">Anterior</a>
+                <% } %>
+
+                <% for (let i = 1; i <= totalPages; i++) { %>
+                    <% if (i === currentPage) { %>
+                        <a class="current-page" href="/?page=<%= i %>"><%= i %></a>
+                    <% } else { %>
+                        <a href="/?page=<%= i %>"><%= i %></a>
                     <% } %>
-                  </div>
-                </section>
-                <section class="banner-carrossel2">
-                <div>
-                    <h1>Banner Carrossel 2</h1>
-                </div>
-                <div class="carousel-container">
-                    <div class="banner">Imagem 4</div>
-                    <div class="banner">Imagem 5</div>
-                    <div class="banner">Imagem 6</div>
-                </div>
-            </section>  
-        </main>
-        <%-include('./partials/footer')%>
-        <script src="/javascripts/bannerCarrosel.js"></script>
+                <% } %>
+
+                <% if (currentPage < totalPages) { %>
+                    <a href="/?page=<%= currentPage + 1 %>">Próxima</a>
+                <% } %>
+            <% } %>
+        </div>
+    </main>
+    <%-include('./partials/footer') %>
+    <script src="/javascripts/bannerCarrosel.js"></script>
 </body>
 
 </html>

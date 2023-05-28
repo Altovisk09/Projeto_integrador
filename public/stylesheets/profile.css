@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2vh;
+}
+section{
+background-color:#FF4D00 ;
+padding-inline: 3vw ;
+padding-top:2vw ;
+padding-bottom:1.5vw ;
+border-radius: 20px;
+margin-bottom: 8vh;
+}
+.textoGrande{
+    margin-top: 2vh;
+    margin-bottom: 1.5vh;
+}
+.textoMedio{
+    margin-bottom: 6vh;
+}
+.btnConfig button{
+    width: 40vw;
+    height: 6vh;
+    border-radius: 25px;
+    margin-bottom: 3vh;
+}

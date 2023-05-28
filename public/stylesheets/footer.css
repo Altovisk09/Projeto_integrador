@@ -50,4 +50,19 @@ footer{
     color: #FFFFFF;
     text-decoration: none;
   }
-  
+
+.containerTel{
+  display: flex;
+  align-items: center;
+}
+.iconTel{
+  height: 80px;
+  width: 80px;
+}
+.infoTele{
+  display: flex;
+}
+.textoicon{
+  margin-bottom: 1vh;
+}
+

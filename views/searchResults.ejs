@@ -15,34 +15,34 @@
       </section>
       <br>
       <h2 class="title">Resultados:</h2>
-          <section class="produtos">
-            <div class="grid-container">
-              <% for (let i = 0; i < produtos.length; i++) { %>
-                <div class="fullProduct">
-                  <div class="image">
-                    <img class="productImage" src="<%= produtos[i].imagem %>" alt="<%= produtos[i].nome_produto %>">
-                  </div>
-                  <div class="description">
-                   <b><%= produtos[i].nome_produto %></b>
-                    <p><%= produtos[i].descricao %></p>
-                    <h5 id="promoFake">
-                     De R$ <%= (produtos[i].preco * 1.2).toFixed(2) %> por:</h5>
-                    <br>
-                    <div id="infoPreco">
-                      <div class="preco">
-                    <h6>a vista:</h6>
-                    <p id="preco">R$ <%= produtos[i].preco %></p>
-                    <h6>no PIX com 20% de desconto</h6>
-                  </div>
-                    <div class="btnDetails">
-                    <a href="#"><button id="btn"><p>Detalhes</p></button></a>
-                  </div>
-                  </div>
-                  </div>
-                </div>
-              <% } %>
+      <section class="produtos">
+        <div class="grid-container">
+          <% for (let i = 0; i < produtos.length; i++) { %>
+            <div class="fullProduct">
+              <div class="image">
+                <img class="productImage" src="<%= produtos[i].imagem %>" alt="<%= produtos[i].nome_produto %>">
+              </div>
+              <div class="description">
+               <b><%= produtos[i].nome_produto %></b>
+                <p><%= produtos[i].descricao %></p>
+                <h5 id="promoFake">
+                 De R$ <%= (produtos[i].preco * 1.2).toFixed(2) %> por:</h5>
+                <br>
+                <div id="infoPreco">
+                  <div class="preco">
+                <h6>a vista:</h6>
+                <p id="preco">R$ <%= produtos[i].preco %></p>
+                <h6>no PIX com 20% de desconto</h6>
+              </div>
+                <div class="btnDetails">
+                  <a href="/products/<%= produtos[i].produto_id %>"><button id="btn">Detalhes</button></a>
+              </div>
+              </div>
+              </div>
             </div>
-          </section> 
+          <% } %>
+        </div>
+      </section>
           <section class="banner-carrossel1">
             <div class="carousel-container">
                 <div class="banner"><img src="/images/meme1.jpg" alt="memees"></div>

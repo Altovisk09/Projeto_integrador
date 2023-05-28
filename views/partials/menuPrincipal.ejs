@@ -1,19 +1,16 @@
 <header>
     <div class="estilização">
         <div class="redeSociais">
-            <img id="estilo" src="" alt="Face">
-            <img id="estilo" src="" alt="Insta">
-            <img id="estilo" src="" alt="Zap">
-            <img src="" alt="Gmail">
+            <img id="estilo" src="/images/icon-removebg-preview.png" alt="Pack  ">
         </div>
         <div class="supt">
             <b><p>Suporte</p></b>
-            <img id="telImg" src="" alt="tel">
+            <img id="telImg" src="/images/telefone-removebg-preview.png" alt="tel">
         </div>
     </div>
     <div class="menu">
         <div class="logo">
-            <a href="/"><img src="" alt="="></a>
+            <a href="/"><img src="/images/menu2-removebg-preview.png" alt="="></a>
             <a href="/">
                 <div> 
                 <h2>TecnoForce</h2>
@@ -32,18 +29,21 @@
             <!-- Inserir icone de usuario -->
             <% if (!locals.isLogged) { %>
                 <div class="login">
-                    <a href="/login"><b><p>Entre ou <br> Crie a sua conta =></p></b></a>
+                    <a href="/login">
+                    <img src="/images/perfil-removebg-preview.png" alt="">
+                    <b><p>Entre ou <br> Crie a sua conta =></p></b>
+                </a>
                 </div>
             <% } else { %>
                 <div class="login">
-                    <a href="/profile/logout"><b>Sair</b></a>
+                    <a href="/logout"><b>Sair</b></a>
                 </div>
             <% } %>
-        </div>
+        </div> 
         <div class="cart">
-            <div>
-                <a href="/cart"><img src="" alt="Cart"></a>
-            </div>
+                <a href="/cart"><img  id="imgcart" src="/images/carrinho-removebg-preview.png" alt="Cart">
+                <p>Carrinho</p>
+            </a>
         </div>
     </div>
     <div class="sub-menu-estilizaçao">

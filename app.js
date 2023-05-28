@@ -5,6 +5,9 @@
   var logger = require('morgan');
   var session = require('express-session')
 
+  
+
+
 
   // routes
   const loginRouter = require('./routes/login');
@@ -16,7 +19,7 @@
 
   //middlewares
   const estaLogado = require('./middlewares/SessionLog');
-  
+  const loadMenuData = require('./middlewares/subMenu');
 
   var app = express();
 
@@ -38,7 +41,7 @@
   
   //middlewares
   app.use(estaLogado);
-
+  app.use(loadMenuData);
 
 
   //rotas

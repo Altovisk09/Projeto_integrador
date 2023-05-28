@@ -6,16 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil || TecnoForce </title>
     <link rel="stylesheet" href="/stylesheets/menu.css">
+    <link rel="stylesheet" href="/stylesheets/footer.css">
+    <link rel="stylesheet" href="/stylesheets/profile.css">
 </head>
 <body>
     <header>
         <%-include("./partials/menuPrincipal.ejs")%>
     </header>
     <main>
-        <h1>Olá <%-usuarioLogado.nome%></h1>
-    </main>
-    <footer>
+        <h1 class="textoGrande">Olá <%-usuarioLogado.nome%></h1>
+        <section class="conteudoTotal">
+        <h2 class="textoMedio">Configurações do Usuário</h2>
 
-    </footer>
+<!-- Botões para as configurações -->
+
+  
+  <div class="btnConfig">
+  <button onclick="window.location.href='/profile/pedidos'">Meus pedidos</button>
+</div>
+
+
+ 
+  <div class="btnConfig">
+  <button onclick="window.location.href='/user/privacy'">Configurações de Privacidade</button>
+</div>
+
+
+  
+  <div class="btnConfig">
+  <button onclick="window.location.href='/profile/dados'">Gerenciar Dados Pessoais</button>
+</div>
+
+
+  
+  <div class="btnConfig">
+  <button onclick="window.location.href='/profile/preferences'">Preferências de Comunicação</button>
+</div>
+
+
+  
+  <div class='btnConfig'>
+  <button onclick="window.location.href='/profile/delete-account'">Excluir Conta</button>
+</div>
+</section>
+    </main>
+    <%-include('./partials/footer')%>
 </body>
 </html>

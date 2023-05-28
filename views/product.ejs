@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= product.nome_produto %> | TecnoForce
+    </title>
+    <link rel="stylesheet" href="/stylesheets/menu.css">
+    <link rel="stylesheet" href="/stylesheets/product.css">
+    <link rel="stylesheet" href="/stylesheets/footer.css">
+</head>
+
+<body>
+    <%- include('partials/menuPrincipal') %>
+        <main>
+            <section class="produto">
+                <div class="imagem">
+                    <img src="<%= product.imagem %>" alt="<%= product.nome_produto %>">
+                </div>
+
+                <div class="infoProduto">
+                    <h2>
+                        <%= product.nome_produto %>
+                    </h2>
+                    <p>
+                        <%= product.descricao %>
+                    </p>
+                    <div class="barra"></div>
+                    <div id="qtd" class="preco">
+                        <%if(!product.qtd_estoque==0){%>
+                            <h3 class="disp">PRODUTO DISPONÍVEL</h3>
+                            <% } else { %>
+                                <h3 class="indisp">PRODUTO INDISPONÍVEL</h3>
+                                <% } %>
+                                    <div>
+                                        <span id='qtd1' class="texto-preco">Quantidade em estoque:</span>
+                                        <span class="valor">
+                                            <%= product.qtd_estoque %>
+                                        </span>
+                                    </div>
+                    </div>
+                    <div class="barra"></div>
+                    <div class="info-preco">
+                        <div class="preco">
+                            <span class="texto-preco"></span>
+                            <h5 id="precoAumentado">
+                                De R$ <%= (Number(product.preco * 1.2).toFixed(2)) %> por:</h5>
+                            <br>
+                            <div class="prec">
+                                <h6>a vista:</h6>
+                                <p id="preco">R$ <%= product.preco %>
+                                </p>
+                                <h6>no PIX com 20% de desconto</h6>
+                            </div>
+                            <br>
+                            <div class="preco">
+                                <span class="texto-preco">
+                                    <h5>Em até 12x de:</h5>
+                                </span>
+                                <span class="valor"> <b>R$ <%= (Number(product.preco) * 1.2 / 12).toFixed(2) %>
+                                    </b></span>
+                                <span class="texto-preco">
+                                    <h5>Sem juros no cartão</h5>
+                                </span>
+                            </div>
+                        </div>
+                        <form action="/cart/add" method="POST">
+                            <input type="hidden" name="productId" value="<%= product.product_id %>">
+                            <button type="submit" id="btncarrinho">
+                              <h1>COMPRAR</h1>
+                              <h4>adicionar ao carrinho</h4>
+                            </button>
+                          </form>
+                    </div>
+                    <div class="barra"></div>
+                    <div class="info-parcelamento">
+                        <h2>Parcelamento</h2>
+                        <ul class="parcelas">
+                            <% for (let i=1; i <=12; i++) { %>
+                                <% let valorParcela=(Number(product.preco) * 1.2 / i).toFixed(2); %>
+                                    <% let desconto='' ; %>
+                                        <% if (i===1) { %>
+                                            <% desconto=' (com 10% de desconto)' ; %>
+                                                <% } else if (i>= 2 && i <= 6) { %>
+                                                        <% desconto=' (com 5% de desconto)' ; %>
+                                                            <% } else if (i>= 7 && i <= 9) { %>
+                                                                    <% desconto=' (sem juros)' ; %>
+                                                                        <% } else { %>
+                                                                            <% desconto=' (com 3% de desconto)' ; %>
+                                                                                <% } %>
+                                                                                    <li>
+                                                                                        <%= i %>x de R$ <%= valorParcela
+                                                                                                + desconto %>
+                                                                                    </li>
+                                                                                    <% } %>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="addinfo">
+                <div class="descricao">
+                    <h2>Por que este produto é bom?</h2>
+                    <p>A placa de vídeo MCR-RTX2060SUPER-HMDLLSS da marca Mancer oferece alto desempenho e qualidade
+                        gráfica impressionante. Com o chipset NVIDIA GeForce RTX 2060 Super e 2176 núcleos CUDA,
+                        proporciona uma experiência de jogo imersiva e fluída.
+                        Sua memória GDDR6 de 8GB e interface de memória de 256 Bits garantem um desempenho excepcional
+                        ao lidar com gráficos complexos e renderizações intensivas. Além disso, a placa possui três
+                        entradas DP e uma entrada HDMI, permitindo uma conexão versátil com diferentes dispositivos.
+                        O barramento PCI Express 3.0 garante uma transferência de dados rápida e eficiente, enquanto o
+                        conector de 8 pinos fornece uma alimentação estável. Com dimensões compactas de 228 x 118 x 48
+                        mm, a placa se encaixa facilmente em diferentes sistemas e gabinetes.
+                        Seja para jogar os últimos lançamentos, editar vídeos em alta resolução ou criar modelos 3D
+                        detalhados, a placa de vídeo MCR-RTX2060SUPER-HMDLLSS oferece o desempenho necessário para lidar
+                        com todas essas tarefas com facilidade. Desfrute de gráficos incríveis, tempos de resposta
+                        rápidos e uma experiência visual imersiva com este produto excepcional da Mancer.</p>
+                </div>
+                <div class="teste">
+                    <h1>Informações adicionais</h1>
+                </div>
+                <div class="infocompleto">
+                
+                <div class="info">
+                    <span class="tituloaddinfo">Marca:</span>
+                    <div class="barra"></div>
+                    <span class="tituloaddinfo">Modelo:</span>
+                    <div class="barra"></div>
+                    <span class="tituloaddinfo">Chipset:</span>
+                    <div class="barra"></div>
+                    <span class="tituloaddinfo">Núcleos CUDA:</span>
+                    <div class="barra"></div>
+                    <span class="tituloaddinfo">Memória:</span>
+                    <div class="barra"></div>
+                    <span class="tituloaddinfo">Tipo de memória:</span>
+                    <div class="barra"></div>
+                    <span class="tituloaddinfo">Clock:</span>
+                    <div class="barra"></div>
+                    <span class="tituloaddinfo">Interface de memória:</span>
+                    <div class="barra"></div>
+                    <span class="tituloaddinfo">Entradas:</span>
+                    <div class="barra"></div>
+                    <span class="tituloaddinfo">Barramento:</span>
+                    <div class="barra"></div>
+                    <span class="tituloaddinfo">Conector:</span>
+                    <div class="barra"></div>
+                    <span class="tituloaddinfo">Dimensões:</span>
+                    <div class="barra"></div>
+                </div>
+
+                <div class="info2">
+                    <span class="valor">Mancer</span>
+                    <div class="barra"></div>
+                    <span class="valor">MCR-RTX2060SUPER-HMDLLSS</span>
+                    <div class="barra"></div>
+                    <span class="valor">NVIDIA GeForce RTX 2060 Super</span>
+                    <div class="barra"></div>
+                    <span class="valor">2176</span>
+                    <div class="barra"></div>
+                    <span class="valor">8GB</span>
+                    <div class="barra"></div>
+                    <span class="valor">GDDR6</span>
+                    <div class="barra"></div>
+                    <span class="valor">1470 MHz</span>
+                    <div class="barra"></div>
+                    <span class="valor">256 Bits</span>
+                    <div class="barra"></div>
+                    <span class="valor">3 x DP, 1 x HDMI</span>
+                    <div class="barra"></div>
+                    <span class="valor">PCI Express 3.0</span>
+                    <div class="barra"></div>
+                    <span class="valor">8 pinos</span>
+                    <div class="barra"></div>
+                    <span class="valor">228 x 118 x 48 mm</span>
+                    <div class="barra"></div>
+                </div>
+           </div>
+
+
+               
+            
+            </section>
+        </main>
+        <%- include('./partials/footer') %>
+</body>
+
+</html>

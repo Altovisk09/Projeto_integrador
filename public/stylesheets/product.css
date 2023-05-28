@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    margin-bottom: 3vh;
+}
+.produto{
+    display: flex;
+    margin-top: 5vh;
+    margin-inline: 3vh;
+    justify-content: space-around;
+}
+.infoProduto{
+    padding: 20px;
+  
+
+}
+.preco{
+    display: flex;
+    flex-direction: column;
+}
+.addinfo{
+    padding: 3vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.descricao h2{
+ margin-bottom: 3vh;
+}
+.descricao p{
+    margin-bottom: 3vh;
+   }
+.teste{
+    display: flex;
+    
+    margin-bottom: 3vh;
+}
+
+.tituloaddinfo{
+    margin-right: 2vw;
+}
+.infocompleto{ 
+    display: flex;
+}
+.info2{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.imagem img{
+    width: 650px;
+    height: 650px;
+}
+.barra{
+    width: 100%;
+    background-color: #D9D9D9;
+    height: 1.5px;
+    
+}
+#qtd{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+.disp{
+    color: green;
+}
+.indisp{
+    color: red;
+}
+#preco{
+    font-size: x-large;
+    font-weight:bolder;
+    color: rgb(24, 165, 11);
+    margin-top: 0.5vh;
+    margin-bottom: 0.5vh;
+}
+#precoAumentado{
+    margin-top: 1vh;
+    color: #FF4D00;
+}
+.info-preco{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10vh ;
+}
+#btncarrinho{
+    width: 15vw;
+    height: 10vh;
+    border-radius: 10px;
+    border-color: green;
+    background-color: green;
+}
+#btncarrinho h4{
+   font-weight: bold;
+   color: #FFFFFF;
+}
+#btncarrinho h1{
+    font-weight:900;
+    color: #FFFFFF;
+ }
+.info-parcelamento ul {
+    list-style: none;
+    padding-top: 10px;
+    font-size: 13px;
+}
+.info-parcelamento {
+ background-color: #D9D9D9;
+ border-radius: 10px;
+ padding: 15px;
+ margin-top: 10px;
+}
