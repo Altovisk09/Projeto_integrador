@@ -8,9 +8,9 @@ const userController = {
       });
     },
     logout: (req, res) => {
-      req.session.destroy();
-      res.clearCookie('logMail');
-      return res.redirect('/');
+      req.session.destroy(),
+      res.clearCookie('logMail')
+      return res.redirect('/')
     },
     pedidos: (req, res) => {
       // Lógica para exibir os pedidos do usuário

@@ -28,15 +28,23 @@
         <div class="log-cad">
             <!-- Inserir icone de usuario -->
             <% if (!locals.isLogged) { %>
-                <div class="login">
-                    <a href="/login">
-                    <img src="/images/perfil-removebg-preview.png" alt="">
-                    <b><p>Entre ou <br> Crie a sua conta =></p></b>
-                </a>
+                <div class="logado" >
+                    <div class="logado1">
+                      <a href="/login"><img src="/images/perfil-removebg-preview.png" alt="Perfil"></a>
+                    </div>
+                    <div>
+                        <a href="/login"><b><p>Entre ou <br> Crie a sua conta =></p></b></a>
+                </div>
                 </div>
             <% } else { %>
-                <div class="login">
-                    <a href="/logout"><b>Sair</b></a>
+                <div class="logado" >
+                    <div class="logado1">
+                        <a href="/profile"><img src="/images/perfil-removebg-preview.png" alt="Perfil"></a>
+                    </div>
+                    <div>
+                    <a class="perfil" href="/profile"><p>Meu perfil</p></a>
+                    <a href="/profile/logout"><b>Sair</b></a>
+                </div>
                 </div>
             <% } %>
         </div> 
